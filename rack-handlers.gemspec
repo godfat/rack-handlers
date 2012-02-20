@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "rack-handlers"
-  s.version = "0.5.0"
+  s.version = "0.5.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Lin Jen-Shin (godfat)"]
@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.files = [
   ".gitignore",
   ".gitmodules",
+  "CHANGES.md",
   "README.md",
   "Rakefile",
   "lib/rack/handler/rainbows.rb",
