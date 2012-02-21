@@ -9,7 +9,8 @@ class Rack::Handler::Unicorn
 
   def self.run app, options
     server = server_class.new(app,
-      :listeners => "#{options[:Host]}:#{options[:Port]}")
+      :listeners   => "#{options[:Host]}:#{options[:Port]}",
+      :config_file => options[:config_file])
 
     yield(server) if block_given?
 

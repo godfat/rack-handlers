@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = "rack-handlers"
-  s.version = "0.5.1"
+  s.version = "0.5.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Lin Jen-Shin (godfat)"]
-  s.date = "2012-02-20"
+  s.date = "2012-02-22"
   s.description = "Some Rack handlers which are not included in Rack distribution."
   s.email = ["godfat (XD) godfat.org"]
   s.files = [
@@ -31,8 +31,11 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<rack>, [">= 0"])
     else
+      s.add_dependency(%q<rack>, [">= 0"])
     end
   else
+    s.add_dependency(%q<rack>, [">= 0"])
   end
 end

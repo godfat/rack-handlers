@@ -8,9 +8,9 @@ desc 'Generate gemspec'
 task 'gem:spec' do
   Gemgem.spec = Gemgem.create do |s|
     s.name    = 'rack-handlers'
-    s.version = '0.5.1'
+    s.version = '0.5.2'
 
-    %w[].each{ |g| s.add_runtime_dependency(g) }
+    %w[rack].each{ |g| s.add_runtime_dependency(g) }
   end
 
   Gemgem.write
