@@ -27,6 +27,16 @@ Some Rack handlers which are not included in Rack distribution.
     rails s rainbows
     rails s zbatery
 
+Additionally, putting `require 'rack/handler/rails-server'` in `script/rails`
+*before* `require 'rails/commands'` would make `rails s` select the server
+by default with this order: zbatery, rainbows, unicorn, puma, and thin.
+
+For zbatery, rainbows, and unicorn, it would also try to load the config
+via `config/zbatery.rb`, or `config/rainbows.rb` depending on which server
+is selected.
+
+> For people who likes to invoke `rails s`!
+
 ## CONTRIBUTORS:
 
 * Lin Jen-Shin (@godfat)
