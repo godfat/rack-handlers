@@ -1,5 +1,9 @@
 # CHANGES
 
+## rack-handlers 0.5.4 -- 2012-08-15
+
+* Fix my incautiousness.
+
 ## rack-handlers 0.5.3 -- 2012-08-15
 
 * Add `rack/handlers/rails-server` which would make `rails s` find the
