@@ -1,6 +1,5 @@
 
 if ARGV[0] == 'server'[0, ARGV[0].size] && ARGV[1] !~ /^\w+/
-  require 'bundler/setup'
   server = %w[zbatery rainbows unicorn puma thin].find do |s|
     begin
       require s
