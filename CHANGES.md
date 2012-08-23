@@ -1,5 +1,10 @@
 # CHANGES
 
+## rack-handlers 0.5.5 -- 2012-08-23
+
+* Fix an error from running simply `rails`.
+  ARGV[0] doesn't exist in that case.
+
 ## rack-handlers 0.5.4 -- 2012-08-15
 
 * Fix my incautiousness.
