@@ -1,5 +1,10 @@
 # CHANGES
 
+## rack-handlers 0.5.6 -- 2013-04-01
+
+* [rails server] Don't hack Rack. Instead, always try to look up
+  default config path. If there's nothing, then don't load the config.
+
 ## rack-handlers 0.5.5 -- 2012-08-23
 
 * Fix an error from running simply `rails`.

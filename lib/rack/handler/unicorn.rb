@@ -8,9 +8,12 @@ class Rack::Handler::Unicorn
   end
 
   def self.run app, options
+    config_path = "config/#{name.downcase}.rb"
+    config_file = config_path if File.exist?(config_path)
+
     server = server_class.new(app,
       :listeners   => "#{options[:Host]}:#{options[:Port]}",
-      :config_file => options[:config_file])
+      :config_file => config_file)
 
     yield(server) if block_given?
 
