@@ -1,5 +1,9 @@
 # CHANGES
 
+## rack-handlers 0.6.1 -- 2013-07-11
+
+* Ditto.
+
 ## rack-handlers 0.6.0 -- 2013-07-11
 
 * Properly find the default config path.
