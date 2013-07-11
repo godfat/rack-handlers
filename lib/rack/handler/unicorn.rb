@@ -7,12 +7,12 @@ class Rack::Handler::Unicorn
     ::Unicorn::HttpServer
   end
 
-  def self.run app, options
-    config_path = "config/#{name.downcase}.rb"
+  def self.run app, opts
+    config_path = "#{File.dirname(opts[:config])}/config/#{opts[:server]}.rb"
     config_file = config_path if File.exist?(config_path)
 
     server = server_class.new(app,
-      :listeners   => "#{options[:Host]}:#{options[:Port]}",
+      :listeners   => "#{opts[:Host]}:#{opts[:Port]}",
       :config_file => config_file)
 
     yield(server) if block_given?
