@@ -35,7 +35,7 @@ For zbatery, rainbows, and unicorn, it would also try to load the config
 via `config/zbatery.rb`, or `config/rainbows.rb` depending on which server
 is selected.
 
-> For people who likes to invoke `rails s`!
+For people who likes to invoke `rails s`!
 
 ## CONTRIBUTORS:
 
