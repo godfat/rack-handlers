@@ -1,5 +1,12 @@
 # CHANGES
 
+## rack-handlers 0.7.0 -- 2013-08-22
+
+* Introduced rack-handlers.rb for you that patched `Rack::Handler.default`
+  with the following order: zbatery, rainbows, unicorn, puma, thin, webrick.
+  You would no longer need to require 'rack/handler/rails-server' in order to
+  make `rails s` work for unicorns.
+
 ## rack-handlers 0.6.1 -- 2013-07-11
 
 * Ditto.

@@ -10,7 +10,7 @@ by Lin Jen-Shin ([godfat](http://godfat.org))
 
 ## DESCRIPTION:
 
-Some Rack handlers which are not included in Rack distribution.
+Unicorn family Rack handlers for you. Mostly for `rails s`.
 
 ## REQUIREMENTS:
 
@@ -23,19 +23,30 @@ Some Rack handlers which are not included in Rack distribution.
 
 ## SYNOPSIS:
 
+Put `'rack-handlers'` and your favorite unicorns into Gemfile
+then you could do the followings:
+
     rails s unicorn
     rails s rainbows
     rails s zbatery
 
-Additionally, putting `require 'rack/handler/rails-server'` in `script/rails`
-*before* `require 'rails/commands'` would make `rails s` select the server
-by default with this order: zbatery, rainbows, unicorn, puma, and thin.
+Because requiring `'rack-handlers'` would make `Rack::Handler.default`
+pick the server with the following order:
 
-For zbatery, rainbows, and unicorn, it would also try to load the config
-via `config/zbatery.rb`, or `config/rainbows.rb` depending on which server
-is selected.
+* zbatery
+* rainbows
+* unicorn
+* puma
+* thin
+* webrick
 
-For people who likes to invoke `rails s`!
+Thus if you have rainbows installed, `rails s` would launch the server with
+rainbows instead of webrick (the original behaviour).
+
+Additionally, it would also try to load the config via `config/zbatery.rb`,
+or `config/rainbows.rb` depending on which server is picked.
+
+For people who likes to run `rails s`!
 
 ## CONTRIBUTORS:
 
