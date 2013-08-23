@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Lin Jen-Shin (godfat)"]
-  s.date = "2013-08-22"
+  s.date = "2013-08-23"
   s.description = "Unicorn family Rack handlers for you. Mostly for `rails s`."
   s.email = ["godfat (XD) godfat.org"]
   s.files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   "task/.gitignore",
   "task/gemgem.rb"]
   s.homepage = "https://github.com/godfat/rack-handlers"
+  s.licenses = ["Apache License 2.0"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.6"
   s.summary = "Unicorn family Rack handlers for you. Mostly for `rails s`."
