@@ -12,13 +12,16 @@ class Rack::Handler::Unicorn
     config_path = "#{File.dirname(opts[:config])}/config/#{server_name}.rb"
     config_file = config_path if File.exist?(config_path)
 
-    server = server_class.new(app,
-      :listeners   => "#{opts[:Host]}:#{opts[:Port]}",
-      :config_file => config_file)
+    server = initialize_server(app, opts, config_file)
 
     yield(server) if block_given?
 
     server.start.join
+  end
+
+  def self.initialize_server app, opts, config_file
+    server_class.new(app, :listeners   => "#{opts[:Host]}:#{opts[:Port]}",
+                          :config_file => config_file)
   end
 end
 

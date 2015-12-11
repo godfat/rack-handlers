@@ -8,6 +8,7 @@ end
 
 Gemgem.init(dir) do |s|
   s.name    = 'rack-handlers'
-  s.version = '0.7.0'
+  s.version = '0.7.1'
   %w[rack].each{ |g| s.add_runtime_dependency(g) }
+  %w[unicorn yahns rainbows zbatery]
 end

@@ -15,7 +15,7 @@ Unicorn family Rack handlers for you. Mostly for `rails s`.
 ## REQUIREMENTS:
 
 * Rack
-* The web server you want to use (e.g. unicorn, rainbows, zbatery, etc).
+* The web server you want to use (e.g. unicorn, yahns, rainbows, zbatery, etc)
 
 ## INSTALLATION:
 
@@ -27,12 +27,14 @@ Put `'rack-handlers'` and your favorite unicorns into Gemfile
 then you could do the followings:
 
     rails s unicorn
+    rails s yahns
     rails s rainbows
     rails s zbatery
 
 Because requiring `'rack-handlers'` would make `Rack::Handler.default`
 pick the server with the following order:
 
+* yahns
 * zbatery
 * rainbows
 * unicorn
@@ -43,8 +45,8 @@ pick the server with the following order:
 Thus if you have rainbows installed, `rails s` would launch the server with
 rainbows instead of webrick (the original behaviour).
 
-Additionally, it would also try to load the config via `config/zbatery.rb`,
-or `config/rainbows.rb` depending on which server is picked.
+Additionally, it would also try to load the config via `config/yahns.rb`,
+or `config/unicorn.rb` depending on which server is picked.
 
 For people who likes to run `rails s`!
 
@@ -56,7 +58,7 @@ For people who likes to run `rails s`!
 
 Apache License 2.0
 
-Copyright (c) 2012-2013, Lin Jen-Shin (godfat)
+Copyright (c) 2012-2015, Lin Jen-Shin (godfat)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
