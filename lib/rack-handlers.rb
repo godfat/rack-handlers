@@ -4,7 +4,9 @@
 require 'rack/handler'
 
 module Rack::Handler
-  DEFAULT = %w[yahns zbatery rainbows unicorn puma thin webrick]
+  DEFAULT = %w[yahns zbatery rainbows unicorn
+               torquebox trinidad
+               puma thin webrick]
 
   def self.default(options = {})
     # Guess.
