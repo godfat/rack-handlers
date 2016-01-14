@@ -1,5 +1,15 @@
 # CHANGES
 
+## rack-handlers 0.7.2 -- 2016-01-14
+
+* Added torquebox and trinidad to the default list for JRuby.
+  Note that they distribute their own rack handler, therefore
+  this only changes the default list rather than providing one.
+
+## rack-handlers 0.7.1 -- 2015-12-12
+
+* Added a new rack handler for yahns.
+
 ## rack-handlers 0.7.0 -- 2013-08-22
 
 * Introduced rack-handlers.rb for you that patched `Rack::Handler.default`
