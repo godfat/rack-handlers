@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
-# stub: rack-handlers 0.7.1 ruby lib
+# stub: rack-handlers 0.7.2 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "rack-handlers"
-  s.version = "0.7.1"
+  s.version = "0.7.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Lin Jen-Shin (godfat)"]
-  s.date = "2015-12-12"
+  s.date = "2016-01-14"
   s.description = "Unicorn family Rack handlers for you. Mostly for `rails s`."
   s.email = ["godfat (XD) godfat.org"]
   s.files = [
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   "task/gemgem.rb"]
   s.homepage = "https://github.com/godfat/rack-handlers"
   s.licenses = ["Apache License 2.0"]
-  s.rubygems_version = "2.5.0"
+  s.rubygems_version = "2.5.1"
   s.summary = "Unicorn family Rack handlers for you. Mostly for `rails s`."
 
   if s.respond_to? :specification_version then
