@@ -3,7 +3,7 @@ language: ruby
 rvm:
   - 2.1
   - 2.2
-  - 2.3.1
+  - 2.3.0
   - rbx
   - jruby-9
 
@@ -11,5 +11,6 @@ before_install:
   - rvm get head
   - rvm reload
   - rvm use --install $TRAVIS_RUBY_VERSION --binary --latest
+  - gem install yahns zbatery rainbows unicorn puma thin torquebox trinidad
 install: 'gem install bundler; bundle install --retry=3'
 script: 'ruby -r bundler/setup -S rake test'
