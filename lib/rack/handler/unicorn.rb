@@ -9,7 +9,8 @@ class Rack::Handler::Unicorn
 
   def self.run app, opts
     server_name = name[/::(\w+)$/, 1].downcase
-    config_path = "#{File.dirname(opts[:config])}/config/#{server_name}.rb"
+    config_dir = opts[:config] ? File.dirname(opts[:config]) : "."
+    config_path = "#{config_dir}/config/#{server_name}.rb"
     config_file = config_path if File.exist?(config_path)
 
     server = initialize_server(app, opts, config_file)
