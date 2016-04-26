@@ -1,7 +1,7 @@
 
 require_relative 'shared'
 
-Pork::API.describe Rack::Handler do
+Pork::API.describe 'rails-server' do
   def run name, &block
     if get(name)
       pid = Process.spawn('rails', 's', name, '-p', '8080')
