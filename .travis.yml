@@ -15,4 +15,4 @@ install:
   - gem install bundler
   - bundle install --retry=3
   - gem install yahns zbatery rainbows unicorn puma thin torquebox trinidad || true
-script: 'ruby -r bundler/setup -S rake test'
+script: 'rake test'
