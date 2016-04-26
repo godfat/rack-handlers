@@ -54,6 +54,7 @@ For people who likes to run `rails s`!
 
 ## CONTRIBUTORS:
 
+* John Goulah (@jgoulah)
 * Lin Jen-Shin (@godfat)
 
 ## LICENSE:
