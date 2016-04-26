@@ -14,10 +14,13 @@ Gem::Specification.new do |s|
   s.files = [
   ".gitignore".freeze,
   ".gitmodules".freeze,
+  ".travis.yml".freeze,
   "CHANGES.md".freeze,
   "Gemfile".freeze,
   "README.md".freeze,
   "Rakefile".freeze,
+  "config.ru".freeze,
+  "config/environment.rb".freeze,
   "lib/rack-handlers.rb".freeze,
   "lib/rack/handler/rails-server.rb".freeze,
   "lib/rack/handler/rainbows.rb".freeze,
@@ -25,14 +28,20 @@ Gem::Specification.new do |s|
   "lib/rack/handler/yahns.rb".freeze,
   "lib/rack/handler/zbatery.rb".freeze,
   "rack-handlers.gemspec".freeze,
+  "script/config.ru".freeze,
+  "script/rails".freeze,
   "task/README.md".freeze,
   "task/gemgem.rb".freeze,
-  "test/test_basic.rb".freeze]
+  "test/shared.rb".freeze,
+  "test/test_basic.rb".freeze,
+  "test/test_rails.rb".freeze]
   s.homepage = "https://github.com/godfat/rack-handlers".freeze
   s.licenses = ["Apache License 2.0".freeze]
   s.rubygems_version = "2.6.3".freeze
   s.summary = "Unicorn family Rack handlers for you. Mostly for `rails s`.".freeze
-  s.test_files = ["test/test_basic.rb".freeze]
+  s.test_files = [
+  "test/test_basic.rb".freeze,
+  "test/test_rails.rb".freeze]
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

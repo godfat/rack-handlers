@@ -1,0 +1,17 @@
+
+require 'rails'
+require 'logger'
+
+APP_PATH = 'rails'
+root = File.expand_path("#{__dir__}/..")
+config = Rails::Application::Configuration.new
+config.root = root
+app = Class.new(Struct.new(:root, :config)) do
+  def call _
+    [200, {}, ["OK\n"]]
+  end
+end.new(root, config)
+Rails.application = app
+Rails.logger = Logger.new(File.open(IO::NULL))
+
+require 'rails/commands'
