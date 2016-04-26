@@ -23,7 +23,7 @@ Pork::API.describe Rack::Handler do
   end
 
   paste :shared
-end
+end unless RUBY_ENGINE == 'jruby'
 
 Pork.execute
 Pork.stat.report
