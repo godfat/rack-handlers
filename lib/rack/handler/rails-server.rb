@@ -1,6 +1,6 @@
 
 if ARGV[0] && ARGV[0] == 'server'[0, ARGV[0].size] && ARGV[1] !~ /^\w+/
-  server = %w[yahns zbatery rainbows unicorn puma thin webrick].find do |s|
+  server = Rack::Handler::DEFAULT.find do |s|
     begin
       require s
       true
