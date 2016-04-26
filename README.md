@@ -1,4 +1,4 @@
-# rack-handlers
+# rack-handlers [![Build Status](https://secure.travis-ci.org/godfat/rack-handlers.png?branch=master)](http://travis-ci.org/godfat/rack-handlers) [![Coverage Status](https://coveralls.io/repos/godfat/rack-handlers/badge.png)](https://coveralls.io/r/godfat/rack-handlers)
 
 by Lin Jen-Shin ([godfat](http://godfat.org))
 
