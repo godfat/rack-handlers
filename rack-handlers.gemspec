@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
-# stub: rack-handlers 0.7.2 ruby lib
+# stub: rack-handlers 0.7.3 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "rack-handlers".freeze
-  s.version = "0.7.2"
+  s.version = "0.7.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]

@@ -1,5 +1,9 @@
 # CHANGES
 
+## rack-handlers 0.7.3 -- 2016-04-27
+
+* config directory is now optional and default to '.' Thanks @jgoulah
+
 ## rack-handlers 0.7.2 -- 2016-01-14
 
 * Added torquebox and trinidad to the default list for JRuby.
