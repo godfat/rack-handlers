@@ -8,14 +8,14 @@ Pork::API.describe Rack::Handler do
     end
   end
 
-  def run name, &block
+  def run name, port, &block
     fork do
       if server = get(name)
         trap 'TERM' do
           server.shutdown
         end if name == 'webrick' # the way to stop webrick
 
-        server.run(app, :Port => 8080){ block.call(name) }
+        server.run(app, :Port => port){ block.call(name) }
       else
         block.call
       end

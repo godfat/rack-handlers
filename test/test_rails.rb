@@ -2,9 +2,9 @@
 require_relative 'shared'
 
 Pork::API.describe 'rails-server' do
-  def run name, &block
+  def run name, port, &block
     if get(name)
-      pid = Process.spawn('rails', 's', name, '-p', '8080')
+      pid = Process.spawn('rails', 's', name, '-p', port.to_s)
       sleep(1) # slow rails
       block.call(name)
       pid
