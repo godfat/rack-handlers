@@ -19,11 +19,9 @@ Pork::API.describe Rack::Handler do
       else
         block.call
       end
+      exit!
     end
   end
 
   paste :shared
 end unless RUBY_ENGINE == 'jruby'
-
-Pork.execute
-Pork.stat.report

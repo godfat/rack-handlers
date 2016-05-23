@@ -8,6 +8,9 @@ require 'pork'
 require 'pork/more/bottomup_backtrace'
 require 'pork/more/color'
 
+Pork.loaded
+Pork.autorun
+
 Pork::API.copy :shared do
   def get name
     Rack::Handler.get(name)

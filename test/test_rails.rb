@@ -15,6 +15,3 @@ Pork::API.describe 'rails-server' do
 
   paste :shared
 end
-
-Pork.execute
-Pork.stat.report
