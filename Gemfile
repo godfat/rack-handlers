@@ -5,6 +5,7 @@ gemspec
 
 gem 'rake'
 gem 'pork'
+gem 'rails'
 
 gem 'simplecov', :require => false if ENV['COV']
 gem 'coveralls', :require => false if ENV['CI']
