@@ -32,8 +32,9 @@ Pork::API.copy :shared do
       msg = rd.gets
       rd.close
       skip if msg == "\n"
-      sleep(0.1) if name == 'puma' # slow puma
-      sleep(1) if ENV['CI'] # slow CI
+      sleep(0.1) if name == 'puma'     # slow puma
+      sleep(1) if ENV['CI']            # slow CI
+      sleep(1) if RUBY_ENGINE == 'rbx' # slow rubinius
       sock = TCPSocket.new('localhost', port)
       sock.binmode
       sock.print("GET / HTTP/1.1\r\nHost: localhost\r\n\r\n")
