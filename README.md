@@ -23,9 +23,19 @@ Unicorn family Rack handlers for you. Mostly for `rails s`.
 
 ## SYNOPSIS:
 
-Put `'rack-handlers'` and your favorite unicorns into Gemfile
-then you could do the followings:
+For `rails s`, put this into your Gemfile:
 
+``` ruby
+group :development do
+  gem 'rack-handlers', :require => 'rack/handler/rails-server'
+end
+
+gem 'unicorn'
+```
+
+And don't forget your favourite unicorns, then you could do the following:
+
+    rails s # a sensible default
     rails s unicorn
     rails s yahns
     rails s rainbows
@@ -51,6 +61,15 @@ Additionally, it would also try to load the config via `config/yahns.rb`,
 or `config/unicorn.rb` depending on which server is picked.
 
 For people who likes to run `rails s`!
+
+### What if my config file is not located in `config/unicorn.rb`?
+
+Then you could use the newly added option `-C`, or `--CONFIG`:
+
+    rails s -C config/twilight.rb
+    rails s --CONFIG config/rarity.rb
+
+So that it would overwrite the default config path.
 
 ## CONTRIBUTORS:
 
