@@ -1,4 +1,8 @@
 
+# workaround Rails spawning a new process...
+$LOAD_PATH.unshift(File.expand_path("#{__dir__}/../lib"))
+require 'rack/handler/rails-server'
+
 require 'rails'
 require 'logger'
 
