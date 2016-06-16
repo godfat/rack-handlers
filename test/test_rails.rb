@@ -3,17 +3,21 @@ require_relative 'shared'
 
 Pork::API.describe 'rails-server' do
   def detect name
-    rd, wr = IO.pipe
-    pid = fork do
-      wr.puts(get(name))
-      wr.close
-    end
+    str = if RUBY_ENGINE == 'jruby'
+            get(name).to_s
+          else
+            rd, wr = IO.pipe
+            pid = fork do
+              wr.puts(get(name))
+              wr.close
+            end
+            result = rd.gets.chomp
+            rd.close
+            Process.waitpid(pid)
+            result
+          end
 
-    result = rd.gets != "\n"
-    rd.close
-    Process.waitpid(pid)
-
-    result
+    str != ''
   end
 
   def run name, port, &block
