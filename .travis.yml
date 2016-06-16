@@ -14,5 +14,5 @@ before_install:
 install:
   - gem install bundler
   - bundle install --retry=3
-  - gem install yahns unicorn puma thin torquebox trinidad || true
+  - gem install yahns unicorn rainbows zbatery puma thin torquebox trinidad || true
 script: 'rake test'
