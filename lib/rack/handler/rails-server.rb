@@ -1,13 +1,18 @@
 
-if ARGV[0] && ARGV[0] == 'server'[0, ARGV[0].size] && ARGV[1] !~ /^\w+/
-  server = Rack::Handler::DEFAULT.find do |s|
-    begin
-      require s
-      true
-    rescue LoadError
-      false
-    end
-  end
+require 'rack-handlers'
 
-  ARGV.insert(1, server)
+module Rack::Handler::RailsServer
+  private
+  def option_parser options
+    parser = super
+    parser.on('-C', '--CONFIG=PATH', String,
+              "Server-specific config file") do |v|
+      options[:server_config] = v
+    end
+    parser
+  end
 end
+
+require 'rails/commands/server'
+
+Rails::Server::Options.prepend(Rack::Handler::RailsServer)
